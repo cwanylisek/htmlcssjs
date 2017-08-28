@@ -13,6 +13,9 @@
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	</head>
   <body>
 
@@ -36,9 +39,9 @@
 
       <div class="jumbotron">
         <h1 class="display-3" style="text-align:center;">CSS HTML JS</h1>
-        <img class="obrazki" src="grafika\css.png" style="width:12%"/>
-        <img class="obrazki" src="grafika\html.png" style="width:17%"/>
-        <img class="obrazki" src="grafika\js.png" style="width:13%"/>
+        <img class="obrazki" src="css.png" style="width:12%"/>
+        <img class="obrazki" src="html.png" style="width:17%"/>
+        <img class="obrazki" src="js.png" style="width:13%"/>
         <p class="lead">Frontendzik który kiedyś może z praktyką wyłapię, przesuwałem te jebane obrazki z godzine.</p>
        
       </div>
@@ -62,13 +65,44 @@
           <h4>Subheading</h4>
           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          <button id="button" class="ui-state-default ui-corner-all">Subheading</button>
+          <div class="toggler">
+          	<p id="effect" class="ui-corner-all">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          </div>
         </div>
       </div>
+      <script>
+  $( function() {
+    $( ".widget input[type=submit], .widget a, .widget button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+      event.preventDefault();
+    } );
+  } );
+
+   $( function() {
+    $( "#button" ).on( "click", function() {
+      $( "#effect" ).addClass( "newClass", 1000, callback );
+    });
+ 
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeClass( "newClass" );
+      }, 1500 );
+    }
+  } );
+   $("#button").mouseenter();
+  </script>
+  <div class="widget">
+  <h1>Widget Buttons</h1>
+  <button>A button element</button>
+ 
+  <input type="submit" value="A submit button">
+ 
+  <a href="#">An anchor</a>
+</div>
 
       <footer class="footer">
-        <p>&copy; Company 2017</p>
+        <p>&copy; BE DO TE 2017</p>
       </footer>
 
     </div> <!-- /container -->

@@ -19,3 +19,30 @@
 .ht {
 	font-style: italic;
 }
+
+.col-lg-6 {
+	font-size: 14px;
+}
+
+body {
+	background-color: lightgray;
+}
+
+   .toggler { width: 500px; height: 200px; position: relative; }
+    #button { padding: 15px 12px; 
+    	font-style: italic; 
+    	border: 0;
+		background: lightgray;
+		font-size: 24px; }
+    #effect { width: 280px;  
+    	padding: 1em; 
+    	border: 1px solid #000; 
+    	background: #808080; 
+    	color: #ffffff;
+    	font-style: italic;
+    	 }
+   .newClass { text-indent: 40px; letter-spacing: .4em; width: 410px; height: 120px; padding: 30px; margin: 10px; font-size: 1.1em; }
+   
+   #button:hover {
+   	background-color: white;
+   }
