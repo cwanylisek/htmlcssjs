@@ -12,7 +12,8 @@
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    
+ 
   	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -30,11 +31,11 @@
               <a class="nav-link" href="#">O mnie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Kontakt</a>
+              <a class="nav-link" href="https://www.google.pl/?gfe_rd=cr&ei=Fi6lWc2JIuWv8wfs3aZ4&gws_rd=ssl" target="_blank">google</a>
             </li>
           </ul>
         </nav>
-        <h3 class="text-muted">Bartosz Tylkowski</h3>
+        <h3 id="topka">Bartosz Tylkowski</h3>
       </div>
 
       <div class="jumbotron">
@@ -68,6 +69,7 @@
           <button id="button" class="ui-state-default ui-corner-all">Subheading</button>
           <div class="toggler">
           	<p id="effect" class="ui-corner-all">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          	<p><a href="https://www.google.com/" target="_blank">google</a>
           </div>
         </div>
       </div>
@@ -90,15 +92,14 @@
       }, 1500 );
     }
   } );
-   $("#button").mouseenter();
+
+
   </script>
   <div class="widget">
-  <h1>Widget Buttons</h1>
-  <button>A button element</button>
- 
-  <input type="submit" value="A submit button">
- 
-  <a href="#">An anchor</a>
+<form>
+<input type="button" class="btn1" value="Dark" onclick="href='style.css'" />
+<input type="button" class="btn2" value="Light" onclick="href='light'" />
+</form>
 </div>
 
       <footer class="footer">

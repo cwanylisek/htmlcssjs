@@ -24,8 +24,42 @@
 	font-size: 14px;
 }
 
+h3 {
+  color: black;
+  letter-spacing: 5px;
+
+}
+
+.btn1 {
+    background-color: grey; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn2 {
+    background-color: lightgrey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn1:hover {
+	background-color: black;
+}
+.btn2:hover {
+	background-color: #e6e6e6;
+}
+
+
 body {
-	background-color: lightgray;
+	background-color: grey;
 }
 
    .toggler { width: 500px; height: 200px; position: relative; }
