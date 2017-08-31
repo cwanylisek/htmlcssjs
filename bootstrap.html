@@ -18,7 +18,7 @@
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 	</head>
-  <body>
+  <body class="lightgrey">
 
     <div class="container">
       <div class="header clearfix">
@@ -92,19 +92,28 @@
       }, 1500 );
     }
   } );
+   //zmiana klasy elementu body
+   
+   $(document).ready(function(){
+   		$('button.btn2').click(function(){
+   		$('body').removeClass('grey').addClass('lightgrey');
+   		
 
+   	});
 
+   		$('button.btn1').click(function(){
+   		$('body').removeClass('lightgrey').addClass('grey');
+   	
+
+   	});
+   });
+   	
   </script>
   <div class="widget">
 
+<button id="g1" class="btn1">Dark</button>
+<button id="g2" class="btn2">Light</button>
 
-<form>
-<input type="button" class="btn1" value="Dark" onClick='location="light.css"'/>
-
-<input type="button" class="btn2" value="Light" onclick='link rel="stylesheet" type="text/css" href="light.css"' />
-</form>
-
-<button class="bn-xs">dupa</button>
 
       <footer class="footer">
         <p>&copy; BE DO TE 2017</p>
