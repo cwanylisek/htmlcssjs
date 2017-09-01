@@ -80,3 +80,11 @@ body {
    #button:hover {
    	background-color: white;
    }
+.lightgrey {
+  background-color: lightgrey;
+}
+
+.grey {
+  background-color: grey;
+}
+   

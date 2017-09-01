@@ -16,6 +16,8 @@
  
   	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	 <!--animacja zejscia do danego obiektu -->
+  	<script src="http://static.tumblr.com/xgq2ds6/8B5ncil17/smoothscroll.js"></script>
 
 	</head>
   <body class="lightgrey">
@@ -25,7 +27,7 @@
         <nav>
           <ul class="nav nav-pills float-right">
             <li class="nav-item">
-              <a class="nav-link " href="#">Projekt <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#" class="smoothScroll">Obrazek <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">O mnie</a>
@@ -46,6 +48,14 @@
         <p class="lead">Frontendzik który kiedyś może z praktyką wyłapię, przesuwałem te jebane obrazki z godzine.</p>
        
       </div>
+     
+
+
+      <a href="#chuj">zabierz minie do chuj</a>
+
+     
+
+
 
       <div class="row marketing">
         <div class="col-lg-6">
@@ -72,12 +82,17 @@
           	<p><a href="https://www.google.com/" target="_blank">google</a>
           </div>
         </div>
+       	<div name="obrazek" id="obrazek">
+       	<img src="jsanim.gif" style="width: 100%;height: 100%;">
+
+
+       	</div>
       </div>
       <script>
   $( function() {
     $( ".widget input[type=submit], .widget a, .widget button" ).button();
     $( "button, input, a" ).click( function( event ) {
-      event.preventDefault();
+      //event.preventDefault();
     } );
   } );
 
@@ -103,16 +118,38 @@
 
    		$('button.btn1').click(function(){
    		$('body').removeClass('lightgrey').addClass('grey');
-   	
+   		
 
    	});
    });
-   	
+
+$(document).ready(function () {  
+$.localScroll();	
+});
+
+//smooth scroll (zabiera ładnie na dół :D)
+$(document).on('click', 'a', function(event){
+    //event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 100);
+});
+
+
   </script>
   <div class="widget">
 
 <button id="g1" class="btn1">Dark</button>
 <button id="g2" class="btn2">Light</button>
+
+ 	
+
+ 	<a name="chuj">to jest moj cel</a>
+     
+
+
+
 
 
       <footer class="footer">
