@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 	<head>
-	
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Bartosz Tylkowski">
@@ -12,8 +12,8 @@
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    
- 
+
+
   	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   	 <!--animacja zejscia do danego obiektu -->
@@ -27,10 +27,10 @@
         <nav>
           <ul class="nav nav-pills float-right">
             <li class="nav-item">
-              <a class="nav-link" href="#obrazek" >Obrazek <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#" class="smoothScroll">Obrazek <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#omnie">About</a>
+              <a class="nav-link" href="#">O mnie</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://www.google.pl/?gfe_rd=cr&ei=Fi6lWc2JIuWv8wfs3aZ4&gws_rd=ssl" target="_blank">google</a>
@@ -46,14 +46,14 @@
         <img class="obrazki" src="html.png" style="width:17%"/>
         <img class="obrazki" src="js.png" style="width:13%"/>
         <p class="lead">Frontendzik który kiedyś może z praktyką wyłapię, przesuwałem te jebane obrazki z godzine.</p>
-       
+
       </div>
-     
+
 
 
       <a href="#chuj">zabierz minie do chuj</a>
 
-     
+
 
 
 
@@ -84,38 +84,10 @@
         </div>
        	<div name="obrazek" id="obrazek">
        	<img src="jsanim.gif" style="width: 100%;height: 100%;">
-       </div>
 
-     <div class="row marketing">
-      <div class="col-lg-12">
-       	<h4>ABOUT</h4>
-       	<p name="omnie">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-       	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-       	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-       	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-       	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-       	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-       	</p></div>
 
-       	<div class="col-lg-6">
-       	<h2 class="t1">TABELKA PIERWSZA</h2>
-       		<ul class="list-group" id="table1">
-       			<li class="list-group-item">obiekt1</li>
-       			<li class="list-group-item">obiekt2</li>
-       			<li class="list-group-item">obiekt3</li>
-       		</ul>
-       </div>
-       <div class="col-lg-6">
-       <h2>TABELKA DRUGA</h2>
-       		<ol class="list-group" id="table2">
-       			<li class="list-group-item">klikaj</li>
-       			<li class="list-group-item">to</li>
-       			<li class="list-group-item">ucieknie</li>
-       		</ol>
-       </div>
-
+       	</div>
       </div>
-     </div>
       <script>
   $( function() {
     $( ".widget input[type=submit], .widget a, .widget button" ).button();
@@ -123,12 +95,12 @@
       //event.preventDefault();
     } );
   } );
-  	//button addvlass/removeClass
+
    $( function() {
     $( "#button" ).on( "click", function() {
       $( "#effect" ).addClass( "newClass", 1000, callback );
     });
- 
+
     function callback() {
       setTimeout(function() {
         $( "#effect" ).removeClass( "newClass" );
@@ -136,23 +108,23 @@
     }
   } );
    //zmiana klasy elementu body
-   
+
    $(document).ready(function(){
    		$('button.btn2').click(function(){
    		$('body').removeClass('grey').addClass('lightgrey');
-   		
+
 
    	});
 
    		$('button.btn1').click(function(){
    		$('body').removeClass('lightgrey').addClass('grey');
-   		
+
 
    	});
    });
 
-$(document).ready(function () {  
-$.localScroll();	
+$(document).ready(function () {
+$.localScroll();
 });
 
 //smooth scroll (zabiera ładnie na dół :D)
@@ -163,50 +135,50 @@ $(document).on('click', 'a', function(event){
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 100);
 });
-//tabelka slide down, chowające się obiekty
-$(function() {
 
-  $('h2.t1').hide().slideDown();
-  var $li = $('ul li:gt(0)');
-  $li.hide().each(function(index) {
-    $(this).delay(300 * index).fadeIn(300);
-  });
+var a = ('5' - 2); //jeżeli odejmuje 'string' - coś, to rzutuje zawsze na Number
+ 									 //bo jak odjąć 'string'-'string'
+console.log(a)
+var b = ('5' + 3);  //jeżeli dodaje 'string' + coś to zawsze wyrzuci 'string'+
+ 										//wartość dodawana by nie wywalać syntax error
+console.log(b)
+var c = ('5' + -'2');
+console.log(c)
 
-  $li.on('click', function() {
-    $(this).fadeOut(700);
-  });
-
-}); 
-$(function() {
-  $('ol li:lt(3)').on('click', function() {
-    $(this).animate({
-      opacity: 0.0,
-      paddingLeft: '+=90'
-    }, 500, function() {
-      $(this).remove();
-    });
-  });
-});
+function calcalert(){  //obliczenie z alertem
+ var d = (5);
+ var u = (5);
+ return d * u;
+ if (d * u > 10) {
+	 alert("Większe niż 10!");
+ } else {
+	 alert("Mniejsze niż 10!");
+ }
+};
+var p = calcalert();
+console.log(p);
   </script>
-  
+  <div class="widget">
 
-<div class="widget">
+<button id="g1" class="btn1">Dark</button>
+<button id="g2" class="btn2">Light</button>
+
+
 
  	<a name="chuj">to jest moj cel</a>
-     
+<br>
+	<button onclick="calcalert()">Dotknij mnie</button>
+</br>
 
 
 
 
 
       <footer class="footer">
-      <button id="g1" class="btn1">Dark</button>
-	  <button id="g2" class="btn2">Light</button>
-
         <p>&copy; BE DO TE 2017</p>
       </footer>
-      </div>
-     <!-- /container -->
+
+    </div> <!-- /container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -214,4 +186,4 @@ $(function() {
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
-</html> 
+</html>
