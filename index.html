@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bartosz Tylkowski">
+    <meta name="author" content="Bartosz Tylkowski">
+
+    <title>be do te 2017</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	 <!--animacja zejscia do danego obiektu -->
+  	<script src="http://static.tumblr.com/xgq2ds6/8B5ncil17/smoothscroll.js"></script>
+
+	</head>
+  <body class="lightgrey">
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link" href="#" class="smoothScroll">Obrazek <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">O mnie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.google.pl/?gfe_rd=cr&ei=Fi6lWc2JIuWv8wfs3aZ4&gws_rd=ssl" target="_blank">google</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 id="topka" class="text-warning">Bartosz Tylkowski</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-3" style="text-align:center;">CSS HTML JS</h1>
+        <img class="obrazki" src="css.png" style="width:12%"/>
+        <img class="obrazki" src="html.png" style="width:17%"/>
+        <img class="obrazki" src="js.png" style="width:13%"/>
+        <p class="lead">Frontendzik który kiedyś może z praktyką wyłapię, przesuwałem te jebane obrazki z godzine.</p>
+
+      </div>
+
+
+
+      <a href="#chuj">zabierz minie do chuj</a>
+
+
+
+
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>HTML</h4>
+          <p class="ht">Hipertekstowy język znaczników, wykorzystywany do tworzenia dokumentów hipertekstowych.</p>
+
+          <h4>CSS</h4>
+          <p class="css">Kaskadowe arkusze stylów to język służący do opisu formy prezentacji (wyświetlania) stron WWW. CSS został opracowany przez organizację W3C w 1996 r. jako potomek języka DSSSL przeznaczony do używania w połączeniu z SGML-em. Pierwszy szkic CSS zaproponował w 1994 r. Håkon Wium Lie.</p>
+
+          <h4>JavaScript</h4>
+          <p class="js">Skryptowy język programowania, stworzony przez firmę Netscape, najczęściej stosowany na stronach internetowych. Twórcą JavaScriptu jest Brendan Eich[3]. Pod koniec lat 90. XX wieku organizacja ECMA wydała na podstawie JavaScriptu standard języka skryptowego o nazwie ECMAScript, aktualnie rozwijaniem tego standardu zajmuje się komisja TC39.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <button id="button" class="ui-state-default ui-corner-all">Subheading</button>
+          <div class="toggler">
+          	<p id="effect" class="ui-corner-all">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          	<p><a href="https://www.google.com/" target="_blank">google</a>
+          </div>
+        </div>
+       	<div name="obrazek" id="obrazek">
+       	<img src="jsanim.gif" style="width: 100%;height: 100%;">
+
+
+       	</div>
+      </div>
+      <script>
+  $( function() {
+    $( ".widget input[type=submit], .widget a, .widget button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+      //event.preventDefault();
+    } );
+  } );
+
+   $( function() {
+    $( "#button" ).on( "click", function() {
+      $( "#effect" ).addClass( "newClass", 1000, callback );
+    });
+
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeClass( "newClass" );
+      }, 1500 );
+    }
+  } );
+   //zmiana klasy elementu body
+
+   $(document).ready(function(){
+   		$('button.btn2').click(function(){
+   		$('body').removeClass('grey').addClass('lightgrey');
+
+
+   	});
+
+   		$('button.btn1').click(function(){
+   		$('body').removeClass('lightgrey').addClass('grey');
+
+
+   	});
+   });
+
+$(document).ready(function () {
+$.localScroll();
+});
+
+//smooth scroll (zabiera ładnie na dół :D)
+$(document).on('click', 'a', function(event){
+    //event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 100);
+});
+
+var a = ('5' - 2); //jeżeli odejmuje 'string' - coś, to rzutuje zawsze na Number
+ 									 //bo jak odjąć 'string'-'string'
+console.log(a)
+var b = ('5' + 3);  //jeżeli dodaje 'string' + coś to zawsze wyrzuci 'string'+
+ 										//wartość dodawana by nie wywalać syntax error
+console.log(b)
+var c = ('5' + -'2');
+console.log(c)
+
+function calcalert(){  //obliczenie z alertem
+ var d = (5);
+ var u = (5);
+ return d * u;
+ if (d * u > 10) {
+	 alert("Większe niż 10!");
+ } else {
+	 alert("Mniejsze niż 10!");
+ }
+};
+var p = calcalert();
+console.log(p);
+  </script>
+  <div class="widget">
+
+<button id="g1" class="btn1">Dark</button>
+<button id="g2" class="btn2">Light</button>
+
+
+
+ 	<a name="chuj">to jest moj cel</a>
+<br>
+	<button onclick="calcalert()">Dotknij mnie</button>
+</br>
+
+
+
+
+
+      <footer class="footer">
+        <p>&copy; BE DO TE 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
